@@ -1,0 +1,25 @@
+{
+  "name": "albertostools",
+  "version": "1.0.0",
+  "description": "various tools and boilerplate stuff",
+  "main": "gulpfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/asilvadesigns/tools.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/asilvadesigns/tools/issues"
+  },
+  "homepage": "https://github.com/asilvadesigns/tools#readme",
+  "devDependencies": {
+    "browser-sync": "^2.17.0",
+    "gulp": "github:gulpjs/gulp#4.0",
+    "gulp-csscomb": "^3.0.8",
+    "gulp-sass": "^2.3.2"
+  }
+}

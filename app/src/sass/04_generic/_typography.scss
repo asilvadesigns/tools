@@ -1,0 +1,20 @@
+@include font-face($lato, true);
+@include font-face($proxima, true);
+
+html {
+	font-size: 100%;
+}
+
+body {
+	font-family: "Lato-Regular";
+	line-height: 1.618;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-family: "Lato-Bold";
+}

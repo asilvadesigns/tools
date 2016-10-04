@@ -1,0 +1,49 @@
+@mixin font-src($font-name, $font-format) {
+	$src: ();
+	@each $format in $font-format {
+		$src: append(
+			$src,
+			url($font-path + $font-name + "." + unquote($format)) + " " + format($format),
+			"comma"
+		)
+	}
+	src: $src;
+}
+
+@mixin font-property($property, $value) {
+	@if ($value) {
+		@if (type-of($value) == string) {
+			$value: unquote($value);
+		}
+		font-#{$property}: $value;
+	}
+}
+
+@mixin font-face($font-map, $debug: false) {
+
+	@if ($debug) {
+		@debug "The following typefaces are available for use:";
+	}
+
+	@each $typeface, $properties in $font-map {
+		@each $font, $fontname in $properties {
+
+			$name:     map-get($font, "name");
+			$formats:  map-get($font, "formats");
+			$weight:   map-get($font, "weight");
+			$style:    map-get($font, "style");
+
+			@if ($debug) {
+				@debug "- #{$name}";
+			}
+
+			@font-face {
+				font-family: $name;
+				@include font-src($name, $formats);
+				@include font-property("weight", $weight);
+				@include font-property("style", $style);
+			}
+		}
+	}
+}
+
