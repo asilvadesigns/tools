@@ -1,0 +1,32 @@
+@mixin create-spacers($property) {
+
+	$first-letter: str-slice($property, 1, 1);
+
+	@each $size, $n in $sizes {
+		.#{$first-letter}a#{$size} {
+			#{$property}: $n;
+		}
+		.#{$first-letter}x#{$size} {
+			#{$property}-left: $n;
+			#{$property}-right: $n;
+		}
+		.#{$first-letter}y#{$size} {
+			#{$property}-top: $n;
+			#{$property}-bottom: $n;
+		}
+		.#{$first-letter}t#{$size} {
+			#{$property}-top: $n;
+		}
+		.#{$first-letter}r#{$size} {
+			#{$property}-right: $n;
+		}
+		.#{$first-letter}b#{$size} {
+			#{$property}-bottom: $n;
+		}
+		.#{$first-letter}l#{$size} {
+			#{$property}-left: $n;
+		}
+	}
+}
+
+

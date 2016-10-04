@@ -74,29 +74,3 @@ $lato: (
 		)
 	)
 );
-
-$proxima: (
-	"Proxima-Nova": (
-		(
-			"name": "Proxima-Nova-Light",
-			"formats": ("woff", "ttf"),
-			"weight": 300
-		), (
-			"name": "Proxima-Nova-LightItalic",
-			"formats": ("woff", "ttf"),
-			"weight": 300,
-			"style": "italic"
-		), (
-			"name": "Proxima-Nova-Regular",
-			"formats": ("woff", "ttf"),
-		), (
-			"name": "Proxima-Nova-Medium",
-			"formats": ("woff", "ttf"),
-			"weight": 500
-		), (
-			"name": "Proxima-Nova-Bold",
-			"formats": ("woff", "ttf"),
-			"weight": 700
-		)
-	)
-);
