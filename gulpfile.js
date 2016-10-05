@@ -1,7 +1,8 @@
-var gulp = require("gulp");
-var sass = require("gulp-sass");
-var comb = require("gulp-csscomb");
-var sync = require("browser-sync");
+var gulp   = require("gulp");
+var sass   = require("gulp-sass");
+var comb   = require("gulp-csscomb");
+var uglify = require("gulp-uglify");
+var sync   = require("browser-sync");
 
 var paths = {
 	html: {
@@ -11,6 +12,10 @@ var paths = {
 	font: {
 		src: "./app/src/font/**/*.*",
 		dist: "./app/dist/font"
+	},
+	scripts: {
+		src: "./app/src/js/**/*.js",
+		dist: "./app/dist/js"
 	},
 	serve: {
 		src: "./app/dist"
@@ -23,7 +28,7 @@ var paths = {
 
 gulp.task("default",
 	gulp.series(
-		html, font, styles,
+		html, font, scripts, styles,
 		gulp.parallel(serve, watch)
 	)
 );
@@ -40,11 +45,10 @@ function font() {
 	.pipe(sync.stream());
 }
 
-function styles() {
-	return gulp.src(paths.styles.src)
-	.pipe(sass().on("error", sass.logError))
-	.pipe(comb())
-	.pipe(gulp.dest(paths.styles.dist))
+function scripts() {
+	return gulp.src(paths.scripts.src)
+	.pipe(uglify())
+	.pipe(gulp.dest(paths.scripts.dist))
 	.pipe(sync.stream());
 }
 
@@ -54,8 +58,17 @@ function serve() {
 	});
 }
 
+function styles() {
+	return gulp.src(paths.styles.src)
+	.pipe(sass().on("error", sass.logError))
+	.pipe(comb())
+	.pipe(gulp.dest(paths.styles.dist))
+	.pipe(sync.stream());
+}
+
 function watch() {
 	gulp.watch(paths.html.src).on("change", html);
 	gulp.watch(paths.font.src).on("change", font);
+	gulp.watch(paths.scripts.src).on("change", scripts);
 	gulp.watch(paths.styles.src).on("change", styles);
 }

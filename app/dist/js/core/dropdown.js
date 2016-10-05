@@ -1,0 +1,1 @@
+var Dropdown=function(){function n(){return 0!==o.length&&void t()}function t(){for(var n=0;n<o.length;n++)o[n].addEventListener("click",e)}function e(n){n.target.classList.contains("open")?n.target.classList.remove("open"):n.target.classList.add("open")}var o=document.querySelectorAll(".js-dropdown");return{init:n}}();Dropdown.init();

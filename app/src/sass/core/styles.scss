@@ -7,8 +7,10 @@
 	"01_settings/var";
 
 @import
-	"02_tools/mixins/spacers",
-	"02_tools/mixins/fonts";
+	"02_tools/functions/conversion",
+	"02_tools/functions/rhythm",
+	"02_tools/mixins/fontface",
+	"02_tools/mixins/spacers";
 
 @import
 	"03_base/reset";

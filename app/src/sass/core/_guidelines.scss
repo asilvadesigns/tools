@@ -1,0 +1,47 @@
+//
+//	Table of Contents
+//	CSS architecture based on ITCSS by Harry Roberts. 
+//
+//	sass/
+//		core/			- this site's framework.
+//		mockups/		- additional exports.
+//		vendor/			- additional frameworks/plugins.
+//	 
+//	core/
+//	 	01_settings/    - variables and other base settings. 
+//	 	02_tools/		- functions, mixins, etc.
+//	 	03_base/        - reset, normalize, etc.
+//	 	04_generic/     - element styling, typography, etc.
+//	 	05_objects/     - class styling, "lego kit", etc.
+//	 	06_utilities/   - helpers erywhere.
+//	 	07_shame/		- first rule of shame, don't talk...
+//
+//	Section Title
+
+//
+//	Strings
+//	"blah"
+	
+//
+//	Newlines
+//	above section titles and between selectors
+.something {
+	color: rebeccapurple;
+}
+
+.somethingelse {
+	color: rebeccapurple;
+}
+
+//
+//	Variables
+//	BEM	used for finding variable source location.
+//	"$unit__master" can be found in "units.scss".
+
+//
+//	Functions
+//	Found within "02_tools/functions".
+
+//
+//	Mixins
+//	Found within "02_tools/mixins".

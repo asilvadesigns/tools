@@ -1,0 +1,10 @@
+@function rhythm($input, $unit: $unit__master) {
+	//
+	//	If $input has no unit, multiply by our base unit, 
+	//	else multiply $input by whatever the human entered.
+	@if (unitless($input)) {
+		@return ($input * $unit) * $unit__rhythm;
+	} @else {
+		@return ($input) * $unit__rhythm;
+	}
+}

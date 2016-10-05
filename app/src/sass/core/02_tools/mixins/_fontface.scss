@@ -3,7 +3,7 @@
 	@each $format in $font-format {
 		$src: append(
 			$src,
-			url($font-path + $font-name + "." + unquote($format)) + " " + format($format),
+			url($path__font + $font-name + "." + unquote($format)) + " " + format($format),
 			"comma"
 		)
 	}
@@ -19,7 +19,7 @@
 	}
 }
 
-@mixin font-face($font-map, $debug: false) {
+@mixin font-face($font-map, $debug: true) {
 
 	@if ($debug) {
 		@debug "The following typefaces are available for use:";

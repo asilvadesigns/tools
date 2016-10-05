@@ -1,7 +1,5 @@
-@mixin create-spacers($property) {
-
+@mixin utility-spacers($property, $sizes: $unit__generic-sizes) {
 	$first-letter: str-slice($property, 1, 1);
-
 	@each $size, $n in $sizes {
 		.#{$first-letter}a#{$size} {
 			#{$property}: $n;
@@ -28,5 +26,3 @@
 		}
 	}
 }
-
-

@@ -3,16 +3,10 @@
     padding: 0;
 }
 
-@font-face {
-    font-family: "Lato-Black";
-
-    src: url("../../font/Lato-Black.eot") format("eot"), url("../../font/Lato-Black.ttf") format("ttf"), url("../../font/Lato-Black.woff") format("woff"), url("../../font/Lato-Black.woff2") format("woff2");
-}
-
-@font-face {
-    font-family: "Lato-BlackItalic";
-
-    src: url("../../font/Lato-BlackItalic.eot") format("eot"), url("../../font/Lato-BlackItalic.ttf") format("ttf"), url("../../font/Lato-BlackItalic.woff") format("woff"), url("../../font/Lato-BlackItalic.woff2") format("woff2");
+hr {
+    height: 1px;
+    border: 0;
+    background-color: currentColor;
 }
 
 @font-face {
@@ -22,97 +16,13 @@
 }
 
 @font-face {
-    font-family: "Lato-BoldItalic";
-
-    src: url("../../font/Lato-BoldItalic.eot") format("eot"), url("../../font/Lato-BoldItalic.ttf") format("ttf"), url("../../font/Lato-BoldItalic.woff") format("woff"), url("../../font/Lato-BoldItalic.woff2") format("woff2");
-}
-
-@font-face {
-    font-family: "Lato-Hairline";
-
-    src: url("../../font/Lato-Hairline.eot") format("eot"), url("../../font/Lato-Hairline.ttf") format("ttf"), url("../../font/Lato-Hairline.woff") format("woff"), url("../../font/Lato-Hairline.woff2") format("woff2");
-}
-
-@font-face {
-    font-family: "Lato-HairlineItalic";
-
-    src: url("../../font/Lato-HairlineItalic.eot") format("eot"), url("../../font/Lato-HairlineItalic.ttf") format("ttf"), url("../../font/Lato-HairlineItalic.woff") format("woff"), url("../../font/Lato-HairlineItalic.woff2") format("woff2");
-}
-
-@font-face {
-    font-family: "Lato-Heavy";
-
-    src: url("../../font/Lato-Heavy.eot") format("eot"), url("../../font/Lato-Heavy.ttf") format("ttf"), url("../../font/Lato-Heavy.woff") format("woff"), url("../../font/Lato-Heavy.woff2") format("woff2");
-}
-
-@font-face {
-    font-family: "Lato-HeavyItalic";
-
-    src: url("../../font/Lato-HeavyItalic.eot") format("eot"), url("../../font/Lato-HeavyItalic.ttf") format("ttf"), url("../../font/Lato-HeavyItalic.woff") format("woff"), url("../../font/Lato-HeavyItalic.woff2") format("woff2");
-}
-
-@font-face {
-    font-family: "Lato-Italic";
-
-    src: url("../../font/Lato-Italic.eot") format("eot"), url("../../font/Lato-Italic.ttf") format("ttf"), url("../../font/Lato-Italic.woff") format("woff"), url("../../font/Lato-Italic.woff2") format("woff2");
-}
-
-@font-face {
-    font-family: "Lato-Light";
-
-    src: url("../../font/Lato-Light.eot") format("eot"), url("../../font/Lato-Light.ttf") format("ttf"), url("../../font/Lato-Light.woff") format("woff"), url("../../font/Lato-Light.woff2") format("woff2");
-}
-
-@font-face {
-    font-family: "Lato-LightItalic";
-
-    src: url("../../font/Lato-LightItalic.eot") format("eot"), url("../../font/Lato-LightItalic.ttf") format("ttf"), url("../../font/Lato-LightItalic.woff") format("woff"), url("../../font/Lato-LightItalic.woff2") format("woff2");
-}
-
-@font-face {
-    font-family: "Lato-Medium";
-
-    src: url("../../font/Lato-Medium.eot") format("eot"), url("../../font/Lato-Medium.ttf") format("ttf"), url("../../font/Lato-Medium.woff") format("woff"), url("../../font/Lato-Medium.woff2") format("woff2");
-}
-
-@font-face {
-    font-family: "Lato-MediumItalic";
-
-    src: url("../../font/Lato-MediumItalic.eot") format("eot"), url("../../font/Lato-MediumItalic.ttf") format("ttf"), url("../../font/Lato-MediumItalic.woff") format("woff"), url("../../font/Lato-MediumItalic.woff2") format("woff2");
-}
-
-@font-face {
     font-family: "Lato-Regular";
 
     src: url("../../font/Lato-Regular.eot") format("eot"), url("../../font/Lato-Regular.ttf") format("ttf"), url("../../font/Lato-Regular.woff") format("woff"), url("../../font/Lato-Regular.woff2") format("woff2");
 }
 
-@font-face {
-    font-family: "Lato-Semibold";
-
-    src: url("../../font/Lato-Semibold.eot") format("eot"), url("../../font/Lato-Semibold.ttf") format("ttf"), url("../../font/Lato-Semibold.woff") format("woff"), url("../../font/Lato-Semibold.woff2") format("woff2");
-}
-
-@font-face {
-    font-family: "Lato-SemiboldItalic";
-
-    src: url("../../font/Lato-SemiboldItalic.eot") format("eot"), url("../../font/Lato-SemiboldItalic.ttf") format("ttf"), url("../../font/Lato-SemiboldItalic.woff") format("woff"), url("../../font/Lato-SemiboldItalic.woff2") format("woff2");
-}
-
-@font-face {
-    font-family: "Lato-Thin";
-
-    src: url("../../font/Lato-Thin.eot") format("eot"), url("../../font/Lato-Thin.ttf") format("ttf"), url("../../font/Lato-Thin.woff") format("woff"), url("../../font/Lato-Thin.woff2") format("woff2");
-}
-
-@font-face {
-    font-family: "Lato-ThinItalic";
-
-    src: url("../../font/Lato-ThinItalic.eot") format("eot"), url("../../font/Lato-ThinItalic.ttf") format("ttf"), url("../../font/Lato-ThinItalic.woff") format("woff"), url("../../font/Lato-ThinItalic.woff2") format("woff2");
-}
-
 html {
-    font-size: 100%;
+    font-size: 112.5%;
 }
 
 body {
@@ -127,6 +37,37 @@ h4,
 h5,
 h6 {
     font-family: "Lato-Bold";
+    line-height: 1.1;
+    margin-bottom: 1.618rem;
+}
+
+h1 {
+    font-size: 6.85353em;
+}
+
+h2 {
+    font-size: 4.2358em;
+}
+
+h3 {
+    font-size: 2.61792em;
+}
+
+h4 {
+    font-size: 1.618em;
+}
+
+h5 {
+    font-size: 1em;
+}
+
+h6 {
+    font-size: 0.61805em;
+}
+
+p {
+    margin-bottom: 1.618em; 
+    padding: 0.16667em;
 }
 
 .container {

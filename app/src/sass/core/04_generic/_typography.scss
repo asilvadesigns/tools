@@ -1,13 +1,25 @@
-@include font-face($lato, true);
-//	@include font-face($proxima, true);
+//
+//	Var
+$h5: $unit__master;
+$h6: $h5 / $unit__rhythm;
+$h4: $h5 * $unit__rhythm;
+$h3: $h4 * $unit__rhythm;
+$h2: $h3 * $unit__rhythm;
+$h1: $h2 * $unit__rhythm;
 
+//
+//	Fonts
+@include font-face($font__lato);
+
+//
+//	Base
 html {
-	font-size: 100%;
+	font-size: pxtopercentage($unit__font-size);
 }
 
 body {
 	font-family: "Lato-Regular";
-	line-height: 1.618;
+	line-height: $unit__line-height;
 }
 
 h1,
@@ -17,4 +29,35 @@ h4,
 h5,
 h6 {
 	font-family: "Lato-Bold";
+	line-height: 1.1;
+	margin-bottom: rhythm(1, 1rem);
+}
+
+h1 {
+	font-size: $h1;
+}
+
+h2 {
+	font-size: $h2;
+}
+
+h3 {
+	font-size: $h3;
+}
+
+h4 {
+	font-size: $h4;
+}
+
+h5 {
+	font-size: $h5;
+}
+
+h6 {
+	font-size: $h6;
+}
+
+p {
+	padding: pxtoem(3);
+	margin-bottom: rhythm(1);
 }

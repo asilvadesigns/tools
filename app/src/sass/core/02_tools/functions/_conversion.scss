@@ -1,0 +1,47 @@
+///
+///	Convert a pixel value to an em. Output value based on
+///	the "$unit__font-size", which is a pixel value.
+///
+///		selector {
+///			font-size: pxtoem(18px);
+///			/* or */
+///			font-size: pxtoem(18);
+/// 	}
+///
+///	@group conversion
+@function pxtoem($input) {
+	//
+	//	If $input has no unit, then give it the appropriate
+	//	unit (in this case "px") and divide against the base
+	//	font size then multiply by the desired unit ("em").
+	//	Else just do the last calculation mentioned above.
+	@if (unitless($input)) {
+		@return (($input * 1px) / $unit__font-size) * 1em;
+	} @else {
+		@return ($input / $unit__font-size) * 1em;
+	}
+}
+
+///
+///	Convert a pixel value to a percentage. Output value bas-
+///	ed on an assumed default of "16px";
+///
+///		selector {
+///			font-size: pxtopercentage(18px);
+///			/* or */
+///			font-size: pxtopercentage(18);
+/// 	}
+///
+///	@group conversion
+@function pxtopercentage($input) {
+	//
+	//	If $input has no unit, then give it the appropriate
+	//	unit (in this case "px") and divide against the base
+	//	font size then multiply by the desired unit ("em").
+	//	Else just do the last calculation mentioned above.
+	@if (unitless($input)) {
+		@return (($input * 1px) / 16px) * 100%;
+	} @else {
+		@return ($input / 16px) * 100%;
+	}
+}
