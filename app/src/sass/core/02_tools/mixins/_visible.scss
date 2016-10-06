@@ -1,0 +1,27 @@
+@mixin visible() {
+
+	[class*="visible-"] {
+		display: none;
+	}
+
+	@each $screen, $queries in $breakpoints {
+
+		$media: ();
+		@each $mediaquery, $mediasize in $queries {
+			$media: append($media, "(#{$mediaquery}: #{$mediasize})", "comma");
+		}
+		$media: str-replace(#{$media},","," and");
+
+		@media #{$media} {
+			.visible-inline-#{$screen} {
+				display: inline;
+			}
+			.visible-inline-block-#{$screen} {
+				display: inline-block;
+			}
+			.visible-block-#{$screen} {
+				display: block;
+			}
+		}
+	}
+}

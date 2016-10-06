@@ -6,8 +6,9 @@ $grid__columns:  12;
 //
 //	Base
 .container {
-	max-width: 30em;
+	max-width: 50em;
 	margin: 0 auto;
+	padding: 0 $grid__gutter;
 }
 
 .row {
