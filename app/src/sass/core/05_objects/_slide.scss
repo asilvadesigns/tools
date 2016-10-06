@@ -1,0 +1,33 @@
+//
+//	Var
+$slide__nav-width: 15em;
+//
+//	Base
+.slide {
+	height: 30em;
+	position: relative;
+	background-color: #fff;
+	border: 1px solid;
+	overflow: hidden;
+	&.open .slide__nav {
+		transform: translate3d(0, 0, 0);
+	}
+}
+
+.slide__nav {
+	position: absolute;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	width: $slide__nav-width;
+	border-right: 1px solid;
+	background-color: #fff;
+	z-index: 2;
+	transition: transform 0.25s ease-in-out;
+	transform: translate3d(negative($slide__nav-width), 0, 0);
+	backface-visibility: hidden;
+}
+
+.slide__body {
+	z-index: 1;
+}

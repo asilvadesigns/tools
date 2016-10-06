@@ -1,6 +1,6 @@
 @mixin grid__columns($columns) {
 	@each $key, $value in $breakpoints {
-		@media (min-width: map-get($value, "min")) {
+		@media (min-width: map-get($value, "min-width")) {
 			@for $i from 1 to $columns {
 				.col-#{$key}-#{$i} {
 					width: percentage($i / $columns);

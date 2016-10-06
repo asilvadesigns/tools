@@ -1,8 +1,9 @@
-var gulp   = require("gulp");
-var sass   = require("gulp-sass");
-var comb   = require("gulp-csscomb");
-var uglify = require("gulp-uglify");
-var sync   = require("browser-sync");
+var gulp         = require("gulp");
+var autoprefixer = require("gulp-autoprefixer");
+var comb         = require("gulp-csscomb");
+var sass         = require("gulp-sass");
+var sync         = require("browser-sync");
+var uglify       = require("gulp-uglify");
 
 var paths = {
 	html: {
@@ -61,6 +62,10 @@ function serve() {
 function styles() {
 	return gulp.src(paths.styles.src)
 	.pipe(sass().on("error", sass.logError))
+	.pipe(autoprefixer({
+		browsers: ['last 3 versions'],
+		cascade: false
+	}))
 	.pipe(comb())
 	.pipe(gulp.dest(paths.styles.dist))
 	.pipe(sync.stream());

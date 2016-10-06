@@ -8,9 +8,15 @@
 		<link rel="stylesheet" href="css/core/styles.css">
 	</head>
 	<body class="mb5">
-		<header class="py1 mb2" style="
+		<header class="py05 mb2" style="
+			/* ugly inline styles -- temporary --*/
 			color: white;
 			background-color: dodgerblue;
+			position: fixed;
+			top: 0;
+			left: 0;
+			width: 100%;
+			backface-visibility: hidden;
 			">
 			<div class="container">
 				<span class="visible-block-xs">Viewing the "xs" breakpoint.</span>
@@ -21,7 +27,7 @@
 			</div>
 		</header>
 		<main class="container">
-			<section class="mb3">
+			<section class="mb5">
 				<header class="mb3">
 					<h5>typography</h5>
 					<hr>
@@ -39,20 +45,36 @@
 				<button type="button" class="js-dropdown">I'm a button</button>
 				<button type="button" class="js-dropdown">I'm a button</button>
 			</section>
-			<section class="mb3">
+			<section class="mb5">
 				<header class="mb3">
 					<h5>grid</h5>
 					<hr class="mb3">
-					<div class="row">
-						<div class="col-xl-3 col-lg-4 col-md-6 col-sm-3"><div style="border: 1px solid;">col-xl-3 col-lg-4 col-md-6 col-sm-3</div></div>
-						<div class="col-xl-3 col-lg-4 col-md-6 col-sm-3"><div style="border: 1px solid;">col-xl-3 col-lg-4 col-md-6 col-sm-3</div></div>
-						<div class="col-xl-3 col-lg-4 col-md-6 col-sm-3"><div style="border: 1px solid;">col-xl-3 col-lg-4 col-md-6 col-sm-3</div></div>
-						<div class="col-xl-3 col-lg-4 col-md-6 col-sm-3"><div style="border: 1px solid;">col-xl-3 col-lg-4 col-md-6 col-sm-3</div></div>
-					</div>
 				</header>
+				<div class="row">
+					<div class="col-xl-3 col-lg-4 col-md-6 col-sm-3"><div style="border: 1px solid;">col-xl-3 col-lg-4 col-md-6 col-sm-3</div></div>
+					<div class="col-xl-3 col-lg-4 col-md-6 col-sm-3"><div style="border: 1px solid;">col-xl-3 col-lg-4 col-md-6 col-sm-3</div></div>
+					<div class="col-xl-3 col-lg-4 col-md-6 col-sm-3"><div style="border: 1px solid;">col-xl-3 col-lg-4 col-md-6 col-sm-3</div></div>
+					<div class="col-xl-3 col-lg-4 col-md-6 col-sm-3"><div style="border: 1px solid;">col-xl-3 col-lg-4 col-md-6 col-sm-3</div></div>
+				</div>
+			</section>
+			<section class="mb5">
+				<header class="mb3">
+					<h5>slide out</h5>
+					<hr class="mb3">
+				</header>
+				<div id="slide__demo" class="slide">
+					<div class="slide__nav">
+						<button type="button" data-toggle="slide" data-target="#slide__demo">Close</button>
+						some nav thing
+					</div>
+					<div class="slide__body">
+						<button type="button" data-toggle="slide" data-target="#slide__demo">Open</button>
+						some body thing
+					</div>
+				</div>
 			</section>
 		</main>
-		<script src="js/core/dropdown.js">
-		</script>
+		<script src="js/core/dropdown.js"></script>
+		<script src="js/core/slide.js"></script>
 	</body>
 </html>

@@ -21,6 +21,7 @@ $unit__x: 1.0 * $unit__master;
 $unit__y: 0.5 * $unit__master;
 
 $unit__generic-sizes: (
+	"05": $unit__x * 0.5,
 	"1": $unit__x * 1,
 	"2": $unit__x * 2,
 	"3": $unit__x * 3,
@@ -29,6 +30,7 @@ $unit__generic-sizes: (
 );
 
 $unit__rhythm-sizes: (
+	"05": $unit__rhythm * 0.5,
 	"1": $unit__rhythm * 1,
 	"2": $unit__rhythm * 2,
 	"3": $unit__rhythm * 3,
