@@ -1,6 +1,7 @@
 //
 //	Var
-$grid__gutter: $unit__x;
+$grid__gutter:   $unit__x;
+$grid__columns:  12;
 
 //
 //	Base
@@ -11,10 +12,14 @@ $grid__gutter: $unit__x;
 
 .row {
 	margin: 0 negative($grid__gutter);
+	@include clearfix;
 }
 
-.col {
+[class*="col"] {
+	display: block;
+	float: left;
 	padding: 0 $grid__gutter;
+	width: 100%;
 }
 
-@include grid__columns();
+@include grid__columns($grid__columns);
