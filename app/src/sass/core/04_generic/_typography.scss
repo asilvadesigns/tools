@@ -8,11 +8,9 @@ $h2: $h3 * $unit__rhythm;
 $h1: $h2 * $unit__rhythm;
 
 //
-//	Fonts
+//	Base
 @include font-face($font__lato);
 
-//
-//	Base
 html {
 	font-size: pxtopercentage($unit__font-size);
 }
@@ -58,6 +56,5 @@ h6 {
 }
 
 p {
-	padding: pxtoem(3);
 	margin-bottom: rhythm(1);
 }

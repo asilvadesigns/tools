@@ -1,4 +1,20 @@
+//
+//	Var
+$grid__gutter: $unit__x;
+
+//
+//	Base
 .container {
 	max-width: 30em;
 	margin: 0 auto;
 }
+
+.row {
+	margin: 0 negative($grid__gutter);
+}
+
+.col {
+	padding: 0 $grid__gutter;
+}
+
+@include grid__columns();

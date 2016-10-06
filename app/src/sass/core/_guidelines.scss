@@ -37,6 +37,8 @@
 //	Variables
 //	BEM	used for finding variable source location.
 //	"$unit__master" can be found in "units.scss".
+//	"$grid__gutter" can be found in "grid.scss".
+//	where $file in "$file__element" is "$file.ext"
 
 //
 //	Functions
@@ -45,3 +47,14 @@
 //
 //	Mixins
 //	Found within "02_tools/mixins".
+
+//
+//	Partial Structure
+//	A typical sass partial within this framework will have
+//	the following sections in this order:
+//
+//	Var			- local variables
+//	Base		- start of partial contents
+//	Sizes		- (optional)
+//	Variants	- (optional)
+//	Themes		- (optional)

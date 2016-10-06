@@ -3,6 +3,21 @@
 	padding: 0;
 }
 
+html {
+	box-sizing: border-box;
+}
+
+*,
+*:after,
+*:before {
+	box-sizing: inherit;
+}
+
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
 hr {
 	border: 0;
 	height: 1px;

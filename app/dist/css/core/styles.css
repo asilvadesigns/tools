@@ -3,6 +3,21 @@
     padding: 0;
 }
 
+html {
+    box-sizing: border-box;
+}
+
+*,
+*:after,
+*:before {
+    box-sizing: inherit;
+}
+
+table {
+    border-spacing: 0; 
+    border-collapse: collapse;
+}
+
 hr {
     height: 1px;
     border: 0;
@@ -66,13 +81,20 @@ h6 {
 }
 
 p {
-    margin-bottom: 1.618em; 
-    padding: 0.16667em;
+    margin-bottom: 1.618em;
 }
 
 .container {
     max-width: 30em;
     margin: 0 auto;
+}
+
+.row {
+    margin: 0 negative(1em);
+}
+
+.col {
+    padding: 0 1em;
 }
 
 .pa1 {
